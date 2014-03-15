@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Threading
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,6 +25,8 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a>@Thread.CurrentThread.CurrentCulture.ToString()</a></li>
+                    <li><a>@Thread.CurrentThread.CurrentUICulture.ToString()</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
